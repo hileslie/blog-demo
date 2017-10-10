@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <v-nav></v-nav>
-    <router-view class="main-view"></router-view>
+    <section class="main">
+      <router-view class="main-view"></router-view>
+    </section>
   </div>
 </template>
 
@@ -16,13 +18,23 @@ export default {
 </script>
 
 <style lang="stylus">
-.main-view{
-  width :100%
-  margin-top :10px
-  word-wrap: break-word
-  word-break: normal
-  &>p:first-child{
-    display :none
+@import './assets/css/markdown.styl'
+
+.main{
+  max-width :1024px
+  margin :10px auto
+  .main-view{
+    box-sizing: border-box;
+    box-shadow: 0 3px 12px rgba(0,0,0,.3)
+    padding: 0 10px
+    word-wrap: break-word
+    word-break: normal
+    &>p:first-child{
+      display :none
+    }
+    img{
+      width :100%
+    }
   }
 }
 </style>

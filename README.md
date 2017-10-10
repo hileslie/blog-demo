@@ -1,6 +1,6 @@
 # blog-demo
 
-> A Vue.js project
+> A blog about learning and life
 
 ## Build Setup
 

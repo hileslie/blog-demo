@@ -40,13 +40,13 @@ export default {
 </script>
 <style lang="stylus" scoped>
 @import '../assets/css/mixin.styl'
-
+.main .main-view{
+  box-shadow: none
+}
 .home{
-  max-width :1024px
-  margin :0 auto
   .items{
     .item{
-      margin :10px 0 10px 0
+      margin :10px 0 15px 0
       background-color :#fff
       overflow :hidden
       border-radius :5px
@@ -84,6 +84,7 @@ export default {
       .desc{
         font-size: 1.4rem
         padding: 10px
+        border-bottom :1px solid #ddd
       }
       .label{
         overflow :hidden
