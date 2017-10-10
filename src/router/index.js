@@ -11,13 +11,11 @@ const routes = [
 Object.keys(articlesInfo).forEach((key) => {
   routes.splice(1, 0, {
     path: `/${key.replace(/\.md/, '')}`,
-    component: () => import(`@articles/${key}`),
-    name: `/${key.replace(/\.md/, '')}`
+    component: () => import(`@articles/${key}`)
   })
 })
 
 Vue.use(Router)
-
 export default new Router({
   routes
 })

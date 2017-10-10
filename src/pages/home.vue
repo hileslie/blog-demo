@@ -1,7 +1,8 @@
 <template>
   <div class="home">
+    <back-to-top></back-to-top>
     <ul class="items">
-      <li class="item" v-for="(x, index) in articlesArr" :key="index" @click="$router.push(`/${articlesArr[index].name.replace(/\.md/, '')}`)">
+      <li class="item" v-for="(x, index) in articlesArr" :key="index" @click="$router.push({path: `/${articlesArr[index].name.replace(/\.md/, '')}`, query: { t: articlesArr[index].date }})">
         <div class="top">
           <img v-if="x.cover" :src="x.cover" alt="">
           <h2 class="title">{{x.title}}</h2>
@@ -16,6 +17,7 @@
   </div>
 </template>
 <script>
+import BackToTop from '@components/back-to-top'
 const articles = require('@articles/articles.json')
 const articlesArr = Object.keys(articles).map((name) => {
   return {
@@ -35,6 +37,9 @@ export default {
   },
   created () {
     // console.log(articlesArr)
+  },
+  components: {
+    'back-to-top': BackToTop
   }
 }
 </script>
@@ -44,17 +49,24 @@ export default {
   box-shadow: none
 }
 .home{
+  padding: 0
   .items{
     .item{
-      margin :10px 0 15px 0
+      margin-bottom :15px
       background-color :#fff
       overflow :hidden
       border-radius :5px
       box-shadow: 0px 1px 10px #888888
       transition(all,.5s,ease)
+      &:hover{
+        box-shadow: 0px 3px 10px #888888
+      }
+      &:active{
+        box-shadow: 0px 3px 10px #888888
+      }
       .top{
         position :relative
-        height :240px
+        height :250px
         img {
           position :absolute
           width :100%
@@ -64,8 +76,8 @@ export default {
         }
         .title{
           position :absolute
-          top :50%
-          left :10%
+          bottom :10%
+          left :10px
           z-index :20
           color :#fff
         }
@@ -96,10 +108,8 @@ export default {
           float :right
         }
       }
-      &:hover{
-        box-shadow: 0px 3px 10px #888888
-      }
     }
   }
 }
+
 </style>
