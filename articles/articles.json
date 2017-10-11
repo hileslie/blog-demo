@@ -1,4 +1,13 @@
 {
+  "Centos_6-x86_64-jdk.md": {
+    "title": "Centos 6 x86_64中安装JDK",
+    "tags": [
+      "Centos"
+    ],
+    "date": "2017-09-19",
+    "desc": "如何在Centos 6 x86_64的服务器中安装JDK",
+    "cover": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508217543&di=9cd73c63f66e17e2321d8498c1b6a52f&imgtype=jpg&er=1&src=http%3A%2F%2Fxi2.me%2Fwp-content%2Fuploads%2F2016%2F06%2Fcentos-logo.png"
+  },
   "code2.md": {
     "title": "代码大全2-笔记",
     "tags": [
@@ -27,14 +36,5 @@
     "date": "2017-06-21",
     "desc": "vue-cli打包上线的中的一些问题",
     "cover": "https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1507613119&di=577aadc9b2da7ea63edaa012a51950b4&src=http://img.mp.itc.cn/upload/20161008/e8fadf087de643e8862d2836d0a65bba_th.png"
-  },
-  "Centos_6-x86_64-jdk.md": {
-    "title": "Centos 6 x86_64中安装JDK",
-    "tags": [
-      "Centos"
-    ],
-    "date": "2017-09-19",
-    "desc": "如何在Centos 6 x86_64的服务器中安装JDK",
-    "cover": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508217543&di=9cd73c63f66e17e2321d8498c1b6a52f&imgtype=jpg&er=1&src=http%3A%2F%2Fxi2.me%2Fwp-content%2Fuploads%2F2016%2F06%2Fcentos-logo.png"
   }
 }

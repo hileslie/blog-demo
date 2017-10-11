@@ -4,15 +4,18 @@
     <section class="main">
       <router-view class="main-view"></router-view>
     </section>
+    <v-back></v-back>
   </div>
 </template>
 
 <script>
-import nav from '@components/nav'
+import Back from '@components/back'
+import Nav from '@components/nav'
 export default {
   name: 'app',
   components: {
-    'v-nav': nav
+    'v-nav': Nav,
+    'v-back': Back
   }
 }
 </script>

@@ -17,5 +17,12 @@ Object.keys(articlesInfo).forEach((key) => {
 
 Vue.use(Router)
 export default new Router({
-  routes
+  routes,
+  scrollBehavior (to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { x: 0, y: 0 }
+    }
+  }
 })

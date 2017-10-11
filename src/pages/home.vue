@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <back-to-top></back-to-top>
     <ul class="items">
       <li class="item" v-for="(x, index) in articlesArr" :key="index" @click="$router.push({path: `/${articlesArr[index].name.replace(/\.md/, '')}`, query: { t: articlesArr[index].date }})">
         <div class="top">
@@ -17,7 +16,6 @@
   </div>
 </template>
 <script>
-import BackToTop from '@components/back-to-top'
 const articles = require('@articles/articles.json')
 const articlesArr = Object.keys(articles).map((name) => {
   return {
@@ -37,9 +35,6 @@ export default {
   },
   created () {
     // console.log(articlesArr)
-  },
-  components: {
-    'back-to-top': BackToTop
   }
 }
 </script>
