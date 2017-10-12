@@ -2,7 +2,9 @@
   <nav class="top-nav">
     <div class="main-nav">
       <router-link class="sub-nav" to="/">首页</router-link>
-      <a class="sub-nav">标签</a>
+      <router-link class="sub-nav" to="/archives">归档</router-link>
+      <router-link class="sub-nav" to="/categories">分类</router-link>
+      <router-link class="sub-nav" to="/tags">标签</router-link>
       <router-link class="sub-nav" to="/about">关于</router-link>
     </div>
   </nav>

@@ -1,40 +1,37 @@
 <template>
   <div class="home">
     <ul class="items">
-      <li class="item" v-for="(x, index) in articlesArr" :key="index" @click="$router.push({path: `/${articlesArr[index].name.replace(/\.md/, '')}`, query: { t: articlesArr[index].date }})">
+      <li class="item" v-for="(x, index) in articleLists" :key="index"
+       @click="$router.push({path: `/${articleLists[index].date}/${articleLists[index].name.replace(/\.md/, '')}`})">
         <div class="top">
           <img v-if="x.cover" :src="x.cover" alt="">
           <h2 class="title">{{x.title}}</h2>
         </div>
         <p class="desc">{{x.desc}}</p>
         <div class="label">
-          <div class="left">{{x.date}}</div>
-          <div class="right">{{x.tags}}</div>
+          <div class="left">发表于{{x.date}}</div>
+          <div class="right">分类于{{x.categories}}</div>
         </div>
       </li>
     </ul>
   </div>
 </template>
 <script>
-const articles = require('@articles/articles.json')
-const articlesArr = Object.keys(articles).map((name) => {
-  return {
-    name: name,
-    title: articles[name].title,
-    tags: articles[name].tags,
-    date: articles[name].date,
-    cover: articles[name].cover,
-    desc: articles[name].desc
-  }
-})
+import { mapGetters } from 'vuex'
 export default {
   data () {
     return {
-      articlesArr: articlesArr
     }
   },
   created () {
-    // console.log(articlesArr)
+  },
+  mounted () {
+    this.$store.dispatch('getArticleList')
+  },
+  computed: {
+    ...mapGetters([
+      'articleLists'
+    ])
   }
 }
 </script>

@@ -1,13 +1,19 @@
 <template>
   <div class="back">
-    <div class="back-to-top" v-show="show">
-      <div class="arrow-outer">
-        <div class="arrow-shadow" @click="backToTop"></div>
+    <transition name="fade">
+      <div class="back-top" v-show="show" @click="backTop">
+        <div class="back-top-wrap">
+          <span class="back-line back-line-first"></span>
+          <span class="back-line back-line-middle"></span>
+          <span class="back-line back-line-last"></span>
+        </div>
       </div>
-    </div>
-    <div class="back-to" v-if="showBack">
-      <div class="arrow-outer">
-        <div class="arrow-shadow" @click="backTo"></div>
+    </transition>
+    <div class="back-to" v-if="showBack" @click="backTo">
+      <div class="back-to-wrap">
+        <span class="back-line back-line-first"></span>
+        <span class="back-line back-line-middle"></span>
+        <span class="back-line back-line-last"></span>
       </div>
     </div>
   </div>
@@ -23,16 +29,10 @@ export default {
     }
   },
   created () {
-    // Routes.forEach((value, index) => {
-    //   console.log(value.path === '/')
-    //   if (value.path !== '/' && value.path !== '/about' && value.path !== '*') {
-    //     this.showBack = true
-    //   }
-    // })
     // console.log(window.location.href)
-    console.log(this.$route)
+    // console.log(this.$route)
     this.$router.beforeEach((to, from, next) => {
-      if (to.path !== '/' && to.path !== '/about' && to.path !== '*') {
+      if (to.path !== '/' && to.path !== '/archives' && to.path !== '/categories' && to.path !== '/tags' && to.path !== '/about' && to.path !== '*') {
         this.showBack = true
       } else {
         this.showBack = false
@@ -44,8 +44,8 @@ export default {
     window.addEventListener('scroll', this.menu)
   },
   methods: {
-    backToTop () {
-      let timer = setInterval(function () {
+    backTop () {
+      let timer = setInterval(() => {
         let scrollTop = document.documentElement.scrollTop || document.body.scrollTop
         let ispeed = Math.floor(-scrollTop / 6)
         if (scrollTop === 0) {
@@ -70,50 +70,97 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+// @import '../assets/css/mixin.styl'
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter, .fade-leave-to { /* .fade-leave-active in below version 2.1.8 */
+  opacity: 0;
+}
+
 .back {
-  .back-to-top {
+  .back-top {
     position: fixed;
     z-index: 999;
-    bottom: 10%;
+    top: 20%;
     right: 10%;
+    padding: 5px;
+    width: 14px;
+    height: 14px;
+    background-color: #222;
+    line-height: 0;
+    cursor: pointer;
 
-    .arrow-outer {
-      width: 45px;
-      height: 24px;
-      overflow: hidden;
+    .back-top-wrap {
+      .back-line {
+        position: relative;
+        background-color: #fff;
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        height: 2px;
+      }
 
-      .arrow-shadow {
-        width: 30px;
-        height: 30px;
+      .back-line-first {
+        width: 50%;
+        top: 1px;
+        right: -1px;
+        transform: rotate(-45deg);
+      }
+
+      .back-line-middle {
+        margin: 3px 0;
+        transform: rotate(90deg);
+      }
+
+      .back-line-last {
+        width: 50%;
+        top: -9px;
+        right: -6px;
         transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
-        -webkit-box-shadow: 0 0 10px 0 #00c853;
-        margin-left: 10px;
-        margin-top: 13px;
-        background-color: #00c853;
       }
     }
   }
+
   .back-to {
     position: fixed;
     z-index: 999;
     top: 10%;
     right: 10%;
-    .arrow-outer {
-      width: 23px;
-      height: 45px;
-      overflow: hidden;
-      .arrow-shadow {
-        width: 30px;
-        height: 30px;
+    padding: 5px;
+    width: 14px;
+    height: 14px;
+    background-color: #222;
+    line-height: 0;
+    cursor: pointer;
+
+    .back-to-wrap {
+      .back-line {
+        position: relative;
+        background-color: #fff;
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        height: 2px;
+      }
+
+      .back-line-first {
+        width: 50%;
+        top :3px
+        left :-2px
+        transform: rotate(-45deg);
+      }
+
+      .back-line-middle {
+        margin: 3px 0;
+      }
+
+      .back-line-last {
+        width: 50%;
+        top :-3px
+        left :-2px
         transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
-        -webkit-box-shadow: 0 0 5px 0 #00c853;
-        margin-top :8px
-        margin-left :8px
-        background-color: #00c853;
       }
     }
   }

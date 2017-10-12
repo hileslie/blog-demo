@@ -2,7 +2,9 @@
   <div id="app">
     <v-nav></v-nav>
     <section class="main">
-      <router-view class="main-view"></router-view>
+      <transition name="fade">
+        <router-view class="main-view"></router-view>
+      </transition>
     </section>
     <v-back></v-back>
   </div>
@@ -22,6 +24,13 @@ export default {
 
 <style lang="stylus">
 @import './assets/css/markdown.styl'
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in below version 2.1.8 */ {
+  opacity: 0
+}
 
 .main{
   max-width :1024px
