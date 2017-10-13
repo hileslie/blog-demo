@@ -35,7 +35,7 @@ export default {
 .main{
   max-width :1024px
   margin :10px auto
-  padding: 0 10px
+  padding: 0 50px
   .main-view{
     box-sizing: border-box;
     box-shadow: 0 3px 12px rgba(0,0,0,.3)
@@ -47,6 +47,13 @@ export default {
     }
     img{
       width :100%
+    }
+  }
+}
+@media screen and (max-width: 768px){
+  #app{
+    .main{
+      padding: 0 5px
     }
   }
 }

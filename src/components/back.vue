@@ -80,16 +80,16 @@ export default {
 }
 
 .back {
+  position: fixed;
+  z-index: 999;
+  bottom: 13%;
+  right: 5px;
   .back-top {
-    position: fixed;
-    z-index: 999;
-    top: 20%;
-    right: 10%;
-    padding: 5px;
     width: 30px;
     height: 30px;
+    padding: 5px;
     border-radius :100%
-    background-color: #222;
+    background-color: #474a4f;
     line-height: 0;
     cursor: pointer;
 
@@ -125,15 +125,12 @@ export default {
   }
 
   .back-to {
-    position: fixed;
-    z-index: 999;
-    top: 10%;
-    right: 10%;
-    padding: 5px;
     width: 30px;
     height: 30px;
+    padding: 5px;
+    margin-top :5px
     border-radius :100%
-    background-color: #222;
+    background-color: #474a4f;
     line-height: 0;
     cursor: pointer;
 
