@@ -86,8 +86,9 @@ export default {
     top: 20%;
     right: 10%;
     padding: 5px;
-    width: 14px;
-    height: 14px;
+    width: 30px;
+    height: 30px;
+    border-radius :100%
     background-color: #222;
     line-height: 0;
     cursor: pointer;
@@ -104,20 +105,20 @@ export default {
 
       .back-line-first {
         width: 50%;
-        top: 1px;
-        right: -1px;
+        top: 5px;
+        right: -2px;
         transform: rotate(-45deg);
       }
 
       .back-line-middle {
-        margin: 3px 0;
+        margin: 12px 0;
         transform: rotate(90deg);
       }
 
       .back-line-last {
         width: 50%;
-        top: -9px;
-        right: -6px;
+        top: -23px;
+        right: -13px;
         transform: rotate(45deg);
       }
     }
@@ -129,8 +130,9 @@ export default {
     top: 10%;
     right: 10%;
     padding: 5px;
-    width: 14px;
-    height: 14px;
+    width: 30px;
+    height: 30px;
+    border-radius :100%
     background-color: #222;
     line-height: 0;
     cursor: pointer;
@@ -147,18 +149,18 @@ export default {
 
       .back-line-first {
         width: 50%;
-        top :3px
+        top :9px
         left :-2px
         transform: rotate(-45deg);
       }
 
       .back-line-middle {
-        margin: 3px 0;
+        margin: 12px 0;
       }
 
       .back-line-last {
         width: 50%;
-        top :-3px
+        top :-9px
         left :-2px
         transform: rotate(45deg);
       }

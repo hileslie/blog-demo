@@ -4,6 +4,7 @@ const articlesArr = Object.keys(articles).map((name) => {
     name: name,
     title: articles[name].title,
     tags: articles[name].tags,
+    categories: articles[name].categories,
     date: articles[name].date,
     cover: articles[name].cover,
     desc: articles[name].desc
