@@ -1,7 +1,7 @@
 const state = {
-  // 文章列表
+  // 全部文章列表
   articleLists: [],
-  // 归档
+  // 归档文章列表
   archives: [],
   // 分类
   categories: [],
