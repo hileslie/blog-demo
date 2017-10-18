@@ -1,13 +1,13 @@
 <template>
-  <section class="tags">
+  <section class="tag">
     <div class="content-wrap">
       <div class="contents">
         <div class="content">
           <div class="collection-title">
-            <h2 class="mg-left">标签</h2>
+            <h2 class="mg-left">{{ $route.params.id }}</h2>
           </div>
-          <div class="collection-content" v-for="(x, index) in tagsNames" :key="index">
-            <router-link class="mg-left" :to="{ path: `/tags/${x}` }">{{x}} ({{tags[x].length}})</router-link>
+          <div class="collection-content" v-for="(y, index) in tags[$route.params.id]" :key="index">
+            <a class="mg-left" @click="$router.push({path: `/${y.date}/${y.path}`})">{{y.date}} -- {{y.title}}</a>
           </div>
         </div>
       </div>
@@ -19,12 +19,10 @@ import { mapGetters } from 'vuex'
 export default {
   data () {
     return {
-      tagsNames: []
     }
   },
   created () {
     this.$store.dispatch('getTags')
-    this.tagsNames = Object.keys(this.tags)
   },
   computed: {
     ...mapGetters([
@@ -34,7 +32,7 @@ export default {
 }
 </script>
 <style lang="stylus" scoped>
-.tags {
+.tag {
   .content-wrap {
     position: relative;
 

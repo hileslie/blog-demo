@@ -7,6 +7,7 @@ const routes = [
   { path: '/archives', component: () => import('@pages/archives') },
   { path: '/categories', component: () => import('@pages/categories') },
   { path: '/tags', component: () => import('@pages/tags') },
+  { path: '/tags/:id', component: () => import('@pages/tag') },
   { path: '/about', component: () => import('@pages/about') },
   { path: '*', component: () => import('@pages/404') }
 ]
@@ -18,7 +19,8 @@ const scrollBehavior = (to, from, savedPosition) => {  // 路由跳转后回到�
 Object.keys(articlesInfo).forEach((key) => {
   routes.splice(1, 0, {
     // path: `/${key.replace(/\.md/, '')}`,
-    path: '/' + articlesInfo[key].date + '/' + key.replace(/\.md/, ''),
+    // path: '/' + articlesInfo[key].date + '/' + key.replace(/\.md/, ''),
+    path: '/' + articlesInfo[key].date + '/' + articlesInfo[key].path,
     component: () => import(`@articles/${key}`),
     name: `/${key.replace(/\.md/, '')}`
   })

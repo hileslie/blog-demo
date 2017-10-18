@@ -1,5 +1,6 @@
 {
   "title": "Centos 6 x86_64中安装JDK",
+  "path":"Centos",
   "tags": ["Centos"],
   "categories": "笔记",
   "date": "2017-09-19",

@@ -8,6 +8,11 @@ import 'highlight.js/styles/atom-one-light.css'
 
 import '@assets/css/common.styl'
 
+import * as filters from './filters/filters.js' // 全局vue filter
+Object.keys(filters).forEach(key => {
+  Vue.filter(key, filters[key])
+})
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

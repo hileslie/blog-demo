@@ -2,7 +2,7 @@
   <div class="home">
     <ul class="items">
       <li class="item" v-for="(x, index) in articleLists" :key="index"
-       @click="$router.push({path: `/${articleLists[index].date}/${articleLists[index].name.replace(/\.md/, '')}`})">
+       @click="$router.push({path: `/${articleLists[index].date}/${articleLists[index].path}`})">
         <div class="top">
           <img v-if="x.cover" :src="x.cover" alt="">
           <h2 class="title">{{x.title}}</h2>

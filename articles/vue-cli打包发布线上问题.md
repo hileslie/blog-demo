@@ -1,11 +1,15 @@
 {
   "title": "vue-cli打包上线",
-  "tags": ["vue-cli", "vue"],
+  "path":"vue-cli",
+  "tags": ["vue-cli", "vue", "JavaScript"],
   "categories": "工作",
   "date": "2017-06-13",
   "desc": "vue-cli打包上线的中的一些问题",
   "cover": "https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1507613119&di=577aadc9b2da7ea63edaa012a51950b4&src=http://img.mp.itc.cn/upload/20161008/e8fadf087de643e8862d2836d0a65bba_th.png"
 }
+
+# vue-cli打包上线
+***
 
 ### 问题：
  vue-cli直接npm run build，打包生成dist文件，部署到服务器，会出现页面空白，并报错的问题![](http://i.imgur.com/0YY2TIp.png)
