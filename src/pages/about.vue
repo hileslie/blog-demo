@@ -11,13 +11,16 @@
 
       </section>
       <section class="section">
-        <h1 class="title">作品</h1>
+        <h1 class="title">个人作品</h1>
         <ul class="items">
           <li class="item">
             <a href="https://github.com/hileslie" target="_blank">GitHub</a>
           </li>
           <li class="item">
             <a href="https://github.com/hileslie/blog" target="_blank">个人博客项目源码</a>
+          </li>
+          <li class="item">
+            <a href="http://hileslie.top/reader" target="_blank">仿追书神器</a>
           </li>
         </ul>
       </section>
@@ -63,6 +66,7 @@ export default {
       .title {
         border-bottom: 1px solid #ddd;
         padding-bottom: 10px;
+        margin-top: 20px;
       }
 
       .items {

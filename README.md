@@ -1,4 +1,4 @@
-# blog-demo
+# blog
 
 > A blog about learning and life
 
