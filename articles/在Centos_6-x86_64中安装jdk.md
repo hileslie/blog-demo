@@ -3,7 +3,7 @@
   "path":"Centos",
   "tags": ["Centos"],
   "categories": "笔记",
-  "date": "2015-09-19",
+  "date": "2017-09-19",
   "desc": "如何在Centos 6 x86_64的服务器中安装JDK",
   "cover": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508217543&di=9cd73c63f66e17e2321d8498c1b6a52f&imgtype=jpg&er=1&src=http%3A%2F%2Fxi2.me%2Fwp-content%2Fuploads%2F2016%2F06%2Fcentos-logo.png"
 }
