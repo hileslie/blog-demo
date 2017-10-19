@@ -14,6 +14,7 @@ function getArticleInfo (path) {
     try {
       const info = content.match(/\{(.*?)\}/)[1]
       articleInfoObj[fileName] = JSON.parse(`{${info}}`)
+      writeFileSync(resolve(__dirname, '../articles/articles.json'), {})
       writeFileSync(resolve(__dirname, '../articles/articles.json'), JSON.stringify(articleInfoObj, null, 2))
       console.log('articles.json has been updated.')
     } catch (__) {}

@@ -18,6 +18,9 @@ const articlesArr = Object.keys(articles).map((name) => {
     desc: articles[name].desc
   }
 })
+articlesArr.sort(function (a, b) {
+  return Date.parse(b.date) - Date.parse(a.date)
+})
 // console.log(articlesArr)
 
 // 时间归档
@@ -42,8 +45,9 @@ const actions = {
 
   // 获取归档文章列表
   getArchives ({commit}) {
-    const time = unique(timeArr)
+    const time = unique(timeArr).reverse()
     let archives = {}
+    let archivesArr = []
     for (let i = 0, _len = time.length; i < _len; i++) {
       archives[time[i]] = []
       for (let j = 0, _len = articlesArr.length; j < _len; j++) {
@@ -51,8 +55,9 @@ const actions = {
           archives[time[i]].push(articlesArr[j])
         }
       }
+      archivesArr.unshift(archives[time[i]])
     }
-    commit('GET_ARCHIVES', archives)
+    commit('GET_ARCHIVES', archivesArr)
   },
 
   // 获取分类文章列表
@@ -82,7 +87,6 @@ const actions = {
         }
       }
     }
-
     commit('GET_TAGS', tagsLists)
   }
 }

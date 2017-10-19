@@ -1,4 +1,15 @@
 {
+  "JavaScript对象属性排序.md": {
+    "title": "JavaScript对象属性排序",
+    "path": "JavaScript",
+    "tags": [
+      "JavaScript"
+    ],
+    "categories": "笔记",
+    "date": "2017-10-19",
+    "desc": "JavaScript对象属性排序问题",
+    "cover": "http://s2.51cto.com/wyfs02/M00/8B/CF/wKiom1hZLQezjl7nAADTxc8C9A8143.jpg"
+  },
   "vue-cli打包发布线上问题.md": {
     "title": "vue-cli打包上线",
     "path": "vue-cli",
@@ -12,17 +23,6 @@
     "desc": "vue-cli打包上线的中的一些问题",
     "cover": "https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1507613119&di=577aadc9b2da7ea63edaa012a51950b4&src=http://img.mp.itc.cn/upload/20161008/e8fadf087de643e8862d2836d0a65bba_th.png"
   },
-  "代码大全2-项目构建前期准备.md": {
-    "title": "代码大全2-笔记",
-    "path": "code",
-    "tags": [
-      "code"
-    ],
-    "categories": "笔记",
-    "date": "2015-06-21",
-    "desc": "代码大全2一些摘要",
-    "cover": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1507623504039&di=6b0f1a398e16a1e8de5a6db7eeb62eae&imgtype=0&src=http%3A%2F%2Fg.hiphotos.baidu.com%2Fzhidao%2Fwh%253D450%252C600%2Fsign%3Da5dda3cf7bf0f736d8ab44053f659f2f%2Fb03533fa828ba61ea66a5d9f4234970a314e59fd.jpg"
-  },
   "vue.md": {
     "title": "vue",
     "path": "vue",
@@ -32,9 +32,20 @@
       "JavaScript"
     ],
     "categories": "笔记",
-    "date": "2016-07-13",
+    "date": "2017-07-13",
     "desc": "vue",
     "cover": "https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1507613119&di=577aadc9b2da7ea63edaa012a51950b4&src=http://img.mp.itc.cn/upload/20161008/e8fadf087de643e8862d2836d0a65bba_th.png"
+  },
+  "代码大全2-项目构建前期准备.md": {
+    "title": "代码大全2-笔记",
+    "path": "code",
+    "tags": [
+      "code"
+    ],
+    "categories": "笔记",
+    "date": "2016-06-21",
+    "desc": "代码大全2一些摘要",
+    "cover": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1507623504039&di=6b0f1a398e16a1e8de5a6db7eeb62eae&imgtype=0&src=http%3A%2F%2Fg.hiphotos.baidu.com%2Fzhidao%2Fwh%253D450%252C600%2Fsign%3Da5dda3cf7bf0f736d8ab44053f659f2f%2Fb03533fa828ba61ea66a5d9f4234970a314e59fd.jpg"
   },
   "在Centos_6-x86_64中安装jdk.md": {
     "title": "Centos 6 x86_64中安装JDK",
@@ -43,7 +54,7 @@
       "Centos"
     ],
     "categories": "笔记",
-    "date": "2017-09-19",
+    "date": "2015-09-19",
     "desc": "如何在Centos 6 x86_64的服务器中安装JDK",
     "cover": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1508217543&di=9cd73c63f66e17e2321d8498c1b6a52f&imgtype=jpg&er=1&src=http%3A%2F%2Fxi2.me%2Fwp-content%2Fuploads%2F2016%2F06%2Fcentos-logo.png"
   }
